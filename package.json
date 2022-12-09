@@ -4,10 +4,16 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "postinstall": "node ./decorate-angular-cli.js",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "postinstall": "node ./decorate-angular-cli.js",
+    "client:start": "nx serve frontend-client",
+    "client:build": "nx build frontend-client",
+    "client:test": "nx test frontend-client",
+    "admin:start": "nx serve frontend-admin",
+    "admin:build": "nx build frontend-admin",
+    "admin:test": "nx test frontend-admin"
   },
   "private": true,
   "dependencies": {
