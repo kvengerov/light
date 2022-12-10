@@ -14,9 +14,9 @@
     "admin:start": "nx serve frontend-admin",
     "admin:build": "nx build frontend-admin",
     "admin:test": "nx test frontend-admin",
-    "api:start": "nx serve frontend-api",
-    "api:build": "nx build frontend-api",
-    "api:test": "nx test frontend-api",
+    "api:start": "nx serve backend-api",
+    "api:build": "nx build backend-api",
+    "api:test": "nx test backend-api",
     "db:start": "cp .env ./docker-compose && cd docker-compose && docker-compose up -d",
     "db:stop": "cd docker-compose && docker-compose stop && rm .env"
   },
@@ -33,11 +33,13 @@
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/typeorm": "^9.0.1",
     "@nrwl/angular": "15.3.0",
-
+    "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "tslib": "^2.3.0",
+    "typeorm": "^0.3.11",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
