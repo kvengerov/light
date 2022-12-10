@@ -52,7 +52,8 @@
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "options": {
-        "port": 5200
+        "port": 5200,
+        "proxyConfig": "apps/frontend/client/proxy.conf.json"
       },
       "configurations": {
         "production": {
@@ -89,5 +90,8 @@
       }
     }
   },
-  "tags": ["scope:frontend-client"]
+  "tags": [
+    "scope:frontend-client",
+    "type:app"
+  ]
 }
