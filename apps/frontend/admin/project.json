@@ -1,25 +1,25 @@
 {
-  "name": "frontend-client",
+  "name": "frontend-admin",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/frontend/client/src",
+  "sourceRoot": "apps/frontend/admin/src",
   "prefix": "light",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/frontend/client",
-        "index": "apps/frontend/client/src/index.html",
-        "main": "apps/frontend/client/src/main.ts",
+        "outputPath": "dist/apps/frontend/admin",
+        "index": "apps/frontend/admin/src/index.html",
+        "main": "apps/frontend/admin/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/frontend/client/tsconfig.app.json",
+        "tsConfig": "apps/frontend/admin/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/frontend/client/src/favicon.ico",
-          "apps/frontend/client/src/assets"
+          "apps/frontend/admin/src/favicon.ico",
+          "apps/frontend/admin/src/assets"
         ],
-        "styles": ["apps/frontend/client/src/styles.scss"],
+        "styles": ["apps/frontend/admin/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -52,14 +52,14 @@
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "options": {
-        "port": 5200
+        "port": 5201
       },
       "configurations": {
         "production": {
-          "browserTarget": "frontend-client:build:production"
+          "browserTarget": "frontend-admin:build:production"
         },
         "development": {
-          "browserTarget": "frontend-client:build:development"
+          "browserTarget": "frontend-admin:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -67,7 +67,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "frontend-client:build"
+        "browserTarget": "frontend-admin:build"
       }
     },
     "lint": {
@@ -75,8 +75,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "apps/frontend/client/**/*.ts",
-          "apps/frontend/client/**/*.html"
+          "apps/frontend/admin/**/*.ts",
+          "apps/frontend/admin/**/*.html"
         ]
       }
     },
@@ -84,10 +84,10 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/frontend/client/jest.config.ts",
+        "jestConfig": "apps/frontend/admin/jest.config.ts",
         "passWithNoTests": true
       }
     }
   },
-  "tags": ["scope:frontend-client"]
+  "tags": ["scope:frontend-admin"]
 }
